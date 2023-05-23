@@ -1,0 +1,19 @@
+// Call the dataTables jQuery plugin
+//se ejecuta el código una vez que ya cargó la página
+$(document).ready(function() {
+	cargarUsuarios();
+  $('#usuarios').DataTable();
+});
+
+async function cargarUsuarios(){
+  const request = await fetch('usuario/1234', {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  });
+  const usuarios = await request.json();
+
+  console.log(usuarios);
+}

@@ -1,0 +1,6 @@
+package controllers;
+
+@RestController
+public class usuarioController {
+
+}

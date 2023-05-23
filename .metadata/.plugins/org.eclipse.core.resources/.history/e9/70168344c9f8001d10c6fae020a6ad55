@@ -1,0 +1,30 @@
+package com.cursojava.curso.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.cursojava.curso.models.Usuario;
+
+@Repository
+@Transactional
+public class UsuarioDaoImp implements UsuarioDao{
+
+	@PersistenceContext
+    EntityManager entityManager;
+
+    @Override
+    @Transactional
+    public List<Usuario> getUsuarios() {
+        String query = "FROM Usuario";
+        System.out.println("");
+        System.out.println(entityManager.createQuery(query).getResultList());
+        System.out.println("");
+        return entityManager.createQuery(query).getResultList();
+    }
+
+}

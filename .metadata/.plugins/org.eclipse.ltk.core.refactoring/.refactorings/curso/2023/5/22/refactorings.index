@@ -1,0 +1,11 @@
+1684717192463	Encapsulate field 'nombre'
+1684717208490	Encapsulate field 'apellido'
+1684717214857	Encapsulate field 'email'
+1684717219364	Encapsulate field 'telefono'
+1684717223571	Encapsulate field 'password'
+1684718225353	Encapsulate field 'id'
+1684718762830	Rename resource 'tables.html'
+1684722483385	Rename resource 'datatables-demo.js'
+1684722493740	Move file
+1684783365158	Rename resource 'register.html'
+1684853167626	Rename method 'verificarEmailPassword'

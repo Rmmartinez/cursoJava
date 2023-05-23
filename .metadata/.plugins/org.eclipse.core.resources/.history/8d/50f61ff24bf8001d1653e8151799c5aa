@@ -1,0 +1,107 @@
+package com.cursojava.curso.controllers;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cursojava.curso.models.Usuario;
+
+@RestController
+public class usuarioController {
+
+	/*
+	@RequestMapping(value = "prueba")
+	public List<String> prueba() {
+		return List.of("Manzana", "Banana", "Kiwi");
+	}
+	*/
+	
+	//Devuelvo un usuario especifico
+	@RequestMapping(value = "usuario/{id}")
+	public Usuario getUsuario(@PathVariable Long id) {
+		Usuario usuario = new Usuario();
+		usuario.setId(id);
+		usuario.setNombre("Magui");
+		usuario.setApellido("Martinez");
+		usuario.setEmail("martinezrm1998@gmail.com");
+		usuario.setTelefono("2664271942");
+		usuario.setPassword("1234abcd");
+		return usuario;
+	}
+	
+	//Devuelvo todos los usuarios
+	@RequestMapping(value = "usuario")
+	public List <Usuario> getUsuarios() {
+		
+		List<Usuario> usuarios = new ArrayList<>();
+		
+		Usuario usuario = new Usuario();
+		usuario.setId(id);
+		usuario.setNombre("Magui");
+		usuario.setApellido("Martinez");
+		usuario.setEmail("martinezrm1998@gmail.com");
+		usuario.setTelefono("2664271942");
+		usuario.setPassword("1234abcd");
+		
+		Usuario usuario2 = new Usuario();
+		usuario2.setId(id);
+		usuario2.setNombre("Julian");
+		usuario2.setApellido("Gouffier");
+		usuario2.setEmail("juliangouffier@gmail.com");
+		usuario2.setTelefono("2664111111");
+		usuario2.setPassword("1234abcd");
+		
+		Usuario usuario3 = new Usuario();
+		usuario3.setId(id);
+		usuario3.setNombre("Json");
+		usuario3.setApellido("Martinez");
+		usuario3.setEmail("jsonmichi@gmail.com");
+		usuario3.setTelefono("2664030345");
+		usuario3.setPassword("1234abcd");
+		
+		usuarios.add(usuario);
+		usuarios.add(usuario2);
+		usuarios.add(usuario3);
+		return usuarios;
+		}
+	
+	
+	//Permite modificar un usuario
+	@RequestMapping(value = "usuario1")
+	public Usuario editar() {
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Magui");
+		usuario.setApellido("Martinez");
+		usuario.setEmail("martinezrm1998@gmail.com");
+		usuario.setTelefono("2664271942");
+		usuario.setPassword("1234abcd");
+		return usuario;
+	}
+	
+	//Permite eliminar un usuario
+	@RequestMapping(value = "usuario2")
+	public Usuario eliminar() {
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Magui");
+		usuario.setApellido("Martinez");
+		usuario.setEmail("martinezrm1998@gmail.com");
+		usuario.setTelefono("2664271942");
+		usuario.setPassword("1234abcd");
+		return usuario;
+	}
+	
+	//Permite buscar un usuario
+	@RequestMapping(value = "usuario3")
+	public Usuario buscar() {
+		Usuario usuario = new Usuario();
+		usuario.setNombre("Magui");
+		usuario.setApellido("Martinez");
+		usuario.setEmail("martinezrm1998@gmail.com");
+		usuario.setTelefono("2664271942");
+		usuario.setPassword("1234abcd");
+		return usuario;
+	}
+}

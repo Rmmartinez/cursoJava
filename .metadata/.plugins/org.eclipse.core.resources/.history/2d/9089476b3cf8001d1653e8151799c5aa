@@ -1,0 +1,22 @@
+package com.cursojava.curso.controllers;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class usuarioController {
+
+	/*
+	@RequestMapping(value = "prueba")
+	public List<String> prueba() {
+		return List.of("Manzana", "Banana", "Kiwi");
+	}
+	*/
+	
+	@RequestMapping(value = "prueba")
+	public String prueba() {
+		return "Prueba";
+	}
+}

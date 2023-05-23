@@ -1,0 +1,7 @@
+// Call the dataTables jQuery plugin
+//se ejecuta el código una vez que ya cargó la página
+$(document).ready(function() {
+	
+	alert(1234);
+  $('#usuarios').DataTable();
+});
